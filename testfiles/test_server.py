@@ -9,7 +9,7 @@ def message_handler(conn, addr):
         data = conn.recv(1024)
         if not data:
             print("[Server] Client disconnected.")
-            break
+            return
 
         print(f"[Client]: {data.decode()}")
 
@@ -19,7 +19,7 @@ def message_handler(conn, addr):
 
         if reply.lower() in ("quit", "exit"):
             print("[Server] Closing connection.")
-            break
+            return
 
 def main():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
