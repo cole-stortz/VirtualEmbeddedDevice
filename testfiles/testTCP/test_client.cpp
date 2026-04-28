@@ -3,37 +3,65 @@
 #include <cstring>
 #include <winsock2.h>
 #include <ws2tcpip.h>
+#include <cstdint>
 
 #pragma comment(lib, "ws2_32.lib")
+
 
 const char* HOST = "127.0.0.1"; // Localhost
 const int PORT = 8080; // Port number
 
+void send_message(SOCKET sock, const std::string& message) {
+    uint32_t len = htonl((uint32_t)message.size()); // Convert length to 4 bytes
+    send(sock, (const char*)&len, sizeof(len), 0); // Send length header
+    send(sock, message.c_str(), (int)message.size(), 0); // Send message body
+}
+
+std::string recv_message(SOCKET sock) {
+    // read exactly 4 bytes for the length header
+    uint32_t len = 0;
+    int total = 0;
+    while (total < 4) {
+        int bytes = recv(sock, (char*)&len + total, 4 - total, 0);  // 0 instead of MSG_WAITALL
+        if (bytes <= 0) return "";
+        total += bytes;
+    }
+    len = ntohl(len);
+
+    // read exactly that many bytes
+    std::string buffer(len, '\0');
+    total = 0;
+    while (total < (int)len) {
+        int bytes = recv(sock, &buffer[total], len - total, 0);  // 0 instead of MSG_WAITALL
+        if (bytes <= 0) return "";
+        total += bytes;
+    }
+    return buffer;
+}
+
 
 // Function to handle the chat loop
 void chat_loop(SOCKET sock) {
-    char buffer[1024]; // Buffer for receiving messages
-    std::string message; // Variable for user input
+    std::string message;
 
     while (true) {
         std::cout << "[You (client)]: ";
         std::getline(std::cin, message);
+        std::cout << "[DEBUG] You typed: '" << message << "' length=" << message.size() << "\n";
 
-        send(sock, message.c_str(), message.size(), 0);
+        send_message(sock, message);
 
         if (message == "quit" || message == "exit") {
             std::cout << "[Client] Closing connection.\n";
             return;
         }
 
-        memset(buffer, 0, sizeof(buffer));
-        int bytes = recv(sock, buffer, sizeof(buffer) - 1, 0);
-        if (bytes <= 0) {
+        std::string reply = recv_message(sock);
+        if (reply.empty()) {
             std::cout << "[Client] Server disconnected.\n";
             return;
         }
 
-        std::string reply(buffer, bytes);
         std::cout << "[Server]: " << reply << "\n";
 
         if (reply == "quit" || reply == "exit") {
