@@ -5,7 +5,7 @@ Embedded Device Addons:
 - LEDs: Simulate status indicators or visual feedback.
 - Buttons: Simulate user input or control interfaces.
 - Sensors: Simulate data collection from the environment (e.g., temperature, humidity).
-    - Temprature, Light, Distance
+    - Temprature, Light, Distance, Color
 - Motors: Simulate actuators for movement or mechanical actions.
 
 Embedded Device Communication:
