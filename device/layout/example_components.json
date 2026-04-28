@@ -1,0 +1,91 @@
+{
+  "device": {
+    "name": "virtual-device-01",
+    "version": "1.0.0"
+  },
+  "components": [
+    {
+      "id": "led_01",
+      "type": "led",
+      "label": "Power LED",
+      "state": {
+        "on": false
+      }
+    },
+    {
+      "id": "led_02",
+      "type": "led",
+      "label": "Status LED",
+      "state": {
+        "on": false
+      }
+    },
+    {
+      "id": "btn_01",
+      "type": "button",
+      "label": "Reset Button",
+      "state": {
+        "pressed": false
+      }
+    },
+    {
+      "id": "btn_02",
+      "type": "button",
+      "label": "Mode Button",
+      "state": {
+        "pressed": false
+      }
+    },
+    {
+      "id": "sensor_temp_01",
+      "type": "sensor",
+      "label": "Temperature Sensor",
+      "sensor_type": "temperature",
+      "unit": "celsius",
+      "state": {
+        "value": 0.0
+      }
+    },
+    {
+      "id": "sensor_light_01",
+      "type": "sensor",
+      "label": "Light Sensor",
+      "sensor_type": "light",
+      "unit": "lux",
+      "state": {
+        "value": 0.0
+      }
+    },
+    {
+      "id": "sensor_dist_01",
+      "type": "sensor",
+      "label": "Distance Sensor",
+      "sensor_type": "distance",
+      "unit": "cm",
+      "state": {
+        "value": 0.0
+      }
+    },
+    {
+      "id": "sensor_color_01",
+      "type": "sensor",
+      "label": "Color Sensor",
+      "sensor_type": "color",
+      "unit": "rgb",
+      "state": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      }
+    },
+    {
+      "id": "motor_01",
+      "type": "motor",
+      "label": "Drive Motor",
+      "state": {
+        "speed": 0,
+        "direction": "forward"
+      }
+    }
+  ]
+}
