@@ -1,39 +1,63 @@
-
 ## TODO
 
 ### Device (C++)
+#### Core
 - [ ] Begin Development...
-- [ ] Develop embedded system loop
-- [ ] Develop layout JSON
-- [ ] Develop communication link with Controller/Server as client
-  #### Device Addons
-    - [ ] Motor
-    - [ ] Sensors
-    - [ ] LEDs
-    - [ ] Buttons/Switches
+- [ ] `main.cpp` — entry point, boot sequence, start device loop
+- [ ] `device.h/.cpp` — main device class, owns all components, runs main loop
+#### Communication
+- [ ] `tcp_client.h/.cpp` — socket logic, connect to server, send/recv, retry logic
+- [ ] `protocol.h/.cpp` — message framing, serialization/deserialization
+#### Config
+- [ ] Design `layout.json` schema — component types, IDs, metadata
+- [ ] `layout.json` — first real device config (LEDs, buttons, sensors, motors)
+#### Components
+- [ ] `component.h/.cpp` — base class/interface all components inherit from
+- [ ] `led.h/.cpp`
+- [ ] `button.h/.cpp`
+- [ ] `sensor.h/.cpp`
+- [ ] `motor.h/.cpp`
+#### Build
+- [ ] `CMakeLists.txt` — build config, link includes and sources
 ---
+
 ### Server (Python)
+#### Core
 - [ ] Begin Development...
-- [ ] Develop communication link with Device/client as server
-- [ ] Develop log
-- [ ] Develop UI elements according to layout JSON
-- [ ] Develop link with Dashboard to display configured UI elements
+- [ ] `main.py` — entry point, starts server, launches dashboard
+- [ ] `tcp_server.py` — accepts connections, passes to session handler
+- [ ] `device_session.py` — manages connected device state, parsed layout, socket
+- [ ] `protocol.py` — mirrors device protocol, message parsing
+#### Dashboard
+- [ ] `app.py` — dashboard entry point, main window/app loop
+- [ ] `ui_builder.py` — dynamically builds UI widgets from received layout.json
+- [ ] `dashboard/components/` — individual UI widgets (LED indicator, sensor graph, button, motor control)
 ---
-### Dashboard
-- [ ] Begin Development...
-- [ ] Display configured UI elements according to server configuration
+
+### Protocol (Shared Contract)
+- [ ] Define message framing (length-prefix vs delimiter)
+- [ ] Define message types: `HANDSHAKE`, `COMMAND`, `STATE_UPDATE`, `SENSOR_DATA`, `ACK`
+- [ ] Decide serialization format (JSON vs binary vs custom)
+- [ ] Document protocol spec in `docs/`
 ---
+
 ### Testing
-- [x] Develop simple chat system using python and c++
-- [x] Create example TCP client/server files to reference for future code
+- [x] Develop simple chat system using Python and C++
+- [x] Create example TCP client/server files to reference
+- [ ] `mock_server.py` — test device handshake and protocol in isolation
+- [ ] `mock_device.py` — test server/UI without C++ running
+- [ ] `protocol_tests/` — unit tests for message framing and parsing
 - [ ] Develop protocol system to be used for communication
 - [ ] Create example UI program to reference for future code
 ---
+
 ### DX / Docs
 - [x] Establish link with GitHub
-- [x] Create Licence for project
-- [x] Begin Development of the README
-- [ ] Finish Development of the README
-- [ ] Finish demo.gif 
-- [ ] Begin Development of requirements.txt
-- [ ] Finish requirements.txt
+- [x] Create licence for project
+- [x] Begin development of the README
+- [ ] Finish development of the README
+- [ ] `demo.gif` — record and finish demo
+- [ ] `requirements.txt` — begin and finish Python dependencies
+- [ ] Document protocol spec
+- [ ] Document `layout.json` schema
+---
