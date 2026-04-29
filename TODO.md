@@ -35,18 +35,18 @@
 ---
 
 ### Protocol (Shared Contract)
-- [ ] Define message framing (length-prefix vs delimiter)
-- [ ] Define message types: `HANDSHAKE`, `COMMAND`, `STATE_UPDATE`, `SENSOR_DATA`, `ACK`
-- [ ] Decide serialization format (JSON vs binary vs custom)
+- [x] Define message framing (length-prefix vs delimiter)
+- [x] Define message types: `HANDSHAKE`, `COMMAND`, `STATE_UPDATE`, `SENSOR_DATA`, `ACK`
+- [x] Decide serialization format (JSON vs binary vs custom)
 - [ ] Document protocol spec in `docs/`
 ---
 
 ### Testing
 - [x] Develop simple chat system using Python and C++
 - [x] Create example TCP client/server files to reference
-- [x] `test_server.py` — test device handshake and protocol in isolation
-- [x] `test_client.cpp` — test server/UI without C++ running
-- [x] `protocol_tests/` — unit tests for message framing and parsing
+- [ ] `mock_server.py` — test device handshake and protocol in isolation
+- [ ] `mock_device.py` — test server/UI without C++ running
+- [ ] `protocol_tests/` — unit tests for message framing and parsing
 - [ ] Develop protocol system to be used for communication
 - [ ] Create example UI program to reference for future code
 ---
@@ -59,7 +59,5 @@
 - [ ] `demo.gif` — record and finish demo
 - [ ] `requirements.txt` — begin and finish Python dependencies
 - [ ] Document protocol spec
-- [x] Document `layout.json` schema
+- [ ] Document `layout.json` schema
 ---
-
-### Next to work on
