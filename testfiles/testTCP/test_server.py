@@ -15,7 +15,7 @@ def recv_message(socket):
     while len(header) < 4:
         chunk = socket.recv(4 - len(header))
         if not chunk:
-            raise None
+            return None
         header += chunk
     
     message_length = struct.unpack('>I', header)[0]
@@ -26,7 +26,7 @@ def recv_message(socket):
     while len(message_data) < message_length:
         chunk = socket.recv(message_length - len(message_data))
         if not chunk:
-            raise None
+            return None
         message_data += chunk
     
     return message_data.decode('utf-8')

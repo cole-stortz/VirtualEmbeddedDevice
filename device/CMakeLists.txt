@@ -8,6 +8,7 @@ include_directories(include)
 add_executable(device
     src/main.cpp
     src/device.cpp
+    src/tcp_client.cpp
 )
 
 target_link_libraries(device ws2_32)

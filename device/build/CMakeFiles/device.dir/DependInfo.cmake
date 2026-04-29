@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/device.cpp" "CMakeFiles/device.dir/src/device.cpp.obj" "gcc" "CMakeFiles/device.dir/src/device.cpp.obj.d"
   "C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/main.cpp" "CMakeFiles/device.dir/src/main.cpp.obj" "gcc" "CMakeFiles/device.dir/src/main.cpp.obj.d"
+  "C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/tcp_client.cpp" "CMakeFiles/device.dir/src/tcp_client.cpp.obj" "gcc" "CMakeFiles/device.dir/src/tcp_client.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

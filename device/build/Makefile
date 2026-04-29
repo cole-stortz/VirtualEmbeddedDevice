@@ -176,6 +176,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/tcp_client.obj: src/tcp_client.cpp.obj
+.PHONY : src/tcp_client.obj
+
+# target to build an object file
+src/tcp_client.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/tcp_client.cpp.obj
+.PHONY : src/tcp_client.cpp.obj
+
+src/tcp_client.i: src/tcp_client.cpp.i
+.PHONY : src/tcp_client.i
+
+# target to preprocess a source file
+src/tcp_client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/tcp_client.cpp.i
+.PHONY : src/tcp_client.cpp.i
+
+src/tcp_client.s: src/tcp_client.cpp.s
+.PHONY : src/tcp_client.s
+
+# target to generate assembly for a file
+src/tcp_client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/tcp_client.cpp.s
+.PHONY : src/tcp_client.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -191,6 +215,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/tcp_client.obj
+	@echo ... src/tcp_client.i
+	@echo ... src/tcp_client.s
 .PHONY : help
 
 

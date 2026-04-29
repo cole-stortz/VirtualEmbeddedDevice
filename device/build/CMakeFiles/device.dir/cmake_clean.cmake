@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/device.dir/src/device.cpp.obj.d"
   "CMakeFiles/device.dir/src/main.cpp.obj"
   "CMakeFiles/device.dir/src/main.cpp.obj.d"
+  "CMakeFiles/device.dir/src/tcp_client.cpp.obj"
+  "CMakeFiles/device.dir/src/tcp_client.cpp.obj.d"
   "device.exe"
   "device.exe.manifest"
   "device.pdb"
