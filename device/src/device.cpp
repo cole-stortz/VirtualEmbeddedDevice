@@ -29,7 +29,9 @@ bool Device::loadLayout(const std::string& filepath) {
         json state        = c["state"];
 
         if (type == "led") {
-            components.push_back(std::make_shared<Led>(id, label, state));
+            auto led = std::make_shared<Led>(id, label, state);
+            led->device = this;
+            components.push_back(led);
         }
         // more types coming soon
     }
@@ -79,4 +81,9 @@ void Device::sendStateUpdate(const std::string& component_id, const json& state)
     message["payload"]["component_id"] = component_id;
     message["payload"]["state"] = state;
     sendMessage(sock, message.dump());
+}
+
+void Device::setLed(const std::string& id, bool on) {
+    auto led = getLed(id);
+    if (led) led->setState(on);
 }

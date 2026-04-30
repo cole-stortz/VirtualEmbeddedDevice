@@ -29,4 +29,5 @@ public:
     void delay(int ms);
 
     void sendStateUpdate(const std::string& Id, const json& state);
+    void setLed(const std::string& id, bool on);
 };

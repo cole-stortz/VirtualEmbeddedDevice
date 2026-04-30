@@ -34,8 +34,8 @@ def handle_connection(conn, addr):
         print(f"[Server] Unexpected message type: {message['type']}")
         return
     
-    # main loop - send commands to device
-    # main loop - listen for state updates
+    # Main loop 
+    # Listen for state updates from the device
     print("\n[Server] Listening for state updates...")
     while True:
         message = receive_message(conn)
