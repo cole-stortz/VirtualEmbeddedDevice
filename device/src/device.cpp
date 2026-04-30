@@ -1,5 +1,6 @@
 #include "device.h"
 #include "components/led.h"
+#include "components/sensor.h"
 #include <fstream>
 #include <iostream>
 #include "protocol.h"
@@ -32,6 +33,10 @@ bool Device::loadLayout(const std::string& filepath) {
             auto led = std::make_shared<Led>(id, label, state);
             led->device = this;
             components.push_back(led);
+        } else if (type == "sensor") {
+            auto sensor = std::make_shared<Sensor>(id, label, state);
+            sensor->device = this;
+            components.push_back(sensor);
         }
         // more types coming soon
     }
@@ -71,6 +76,15 @@ std::shared_ptr<Led> Device::getLed(const std::string& id) {
     return nullptr;
 }
 
+std::shared_ptr<Sensor> Device::getSensor(const std::string& id) {
+    for (const auto& c : components) {
+        if (c->id == id && c->type == "sensor") {
+            return std::dynamic_pointer_cast<Sensor>(c);
+        }
+    }
+    return nullptr;
+}
+
 void Device::delay(int ms) {
     std::this_thread::sleep_for(std::chrono::milliseconds(ms));
 }
@@ -86,4 +100,14 @@ void Device::sendStateUpdate(const std::string& component_id, const json& state)
 void Device::setLed(const std::string& id, bool on) {
     auto led = getLed(id);
     if (led) led->setState(on);
+}
+
+void Device::setSensorValue(const std::string& id, float value) {
+    auto sensor = getSensor(id);
+    if (sensor) sensor->setValue(value);
+}
+
+void Device::setSensorColor(const std::string& id, int r, int g, int b) {
+    auto sensor = getSensor(id);
+    if (sensor) sensor->setColor(r, g, b);
 }

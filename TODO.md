@@ -3,8 +3,9 @@
 ### Device (C++)
 #### Core
 - [x] Begin Development...
-- [ ] `main.cpp` — entry point, boot sequence, start device loop
+- [x] `main.cpp` — entry point, boot sequence, start device loop
 - [ ] `device.h/.cpp` — main device class, owns all components, runs main loop
+- [x] `program.h/.cpp` — main program to write embedded like code into.
 #### Communication
 - [x] `tcp_client.h/.cpp` — socket logic, connect to server, send/recv, retry logic
 - [x] `protocol.h/.cpp` — message framing, serialization/deserialization
@@ -12,8 +13,8 @@
 - [x] Design `layout.json` schema — component types, IDs, metadata
 - [x] `layout.json` — first real device config (LEDs, buttons, sensors, motors)
 #### Components
-- [ ] `component.h/.cpp` — base class/interface all components inherit from
-- [ ] `led.h/.cpp`
+- [x] `component.h/.cpp` — base class/interface all components inherit from
+- [x] `led.h/.cpp`
 - [ ] `button.h/.cpp`
 - [ ] `sensor.h/.cpp`
 - [ ] `motor.h/.cpp`

@@ -13,6 +13,7 @@ add_executable(device
     src/program.cpp
     src/components/component.cpp
     src/components/led.cpp
+    src/components/sensor.cpp
 )
 
 target_link_libraries(device ws2_32)

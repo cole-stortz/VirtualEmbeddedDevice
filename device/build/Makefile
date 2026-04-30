@@ -176,6 +176,30 @@ src/components/led.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/components/led.cpp.s
 .PHONY : src/components/led.cpp.s
 
+src/components/sensor.obj: src/components/sensor.cpp.obj
+.PHONY : src/components/sensor.obj
+
+# target to build an object file
+src/components/sensor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/components/sensor.cpp.obj
+.PHONY : src/components/sensor.cpp.obj
+
+src/components/sensor.i: src/components/sensor.cpp.i
+.PHONY : src/components/sensor.i
+
+# target to preprocess a source file
+src/components/sensor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/components/sensor.cpp.i
+.PHONY : src/components/sensor.cpp.i
+
+src/components/sensor.s: src/components/sensor.cpp.s
+.PHONY : src/components/sensor.s
+
+# target to generate assembly for a file
+src/components/sensor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/components/sensor.cpp.s
+.PHONY : src/components/sensor.cpp.s
+
 src/device.obj: src/device.cpp.obj
 .PHONY : src/device.obj
 
@@ -311,6 +335,9 @@ help:
 	@echo ... src/components/led.obj
 	@echo ... src/components/led.i
 	@echo ... src/components/led.s
+	@echo ... src/components/sensor.obj
+	@echo ... src/components/sensor.i
+	@echo ... src/components/sensor.s
 	@echo ... src/device.obj
 	@echo ... src/device.i
 	@echo ... src/device.s

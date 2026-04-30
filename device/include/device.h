@@ -5,6 +5,7 @@
 #include "json.hpp"
 #include "components/component.h"
 #include "components/led.h"
+#include "components/sensor.h"
 #include <chrono>
 #include <thread>
 #include <winsock2.h>
@@ -26,8 +27,12 @@ public:
     std::shared_ptr<Component> getComponent(const std::string& id);
 
     std::shared_ptr<Led> getLed(const std::string& id);
+    std::shared_ptr<Sensor> getSensor(const std::string& id);
+
     void delay(int ms);
 
     void sendStateUpdate(const std::string& Id, const json& state);
     void setLed(const std::string& id, bool on);
+    void setSensorValue(const std::string& id, float value);
+    void setSensorColor(const std::string& id, int r, int g, int b);
 };

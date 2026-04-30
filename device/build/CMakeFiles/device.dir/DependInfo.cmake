@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/components/component.cpp" "CMakeFiles/device.dir/src/components/component.cpp.obj" "gcc" "CMakeFiles/device.dir/src/components/component.cpp.obj.d"
   "C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/components/led.cpp" "CMakeFiles/device.dir/src/components/led.cpp.obj" "gcc" "CMakeFiles/device.dir/src/components/led.cpp.obj.d"
+  "C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/components/sensor.cpp" "CMakeFiles/device.dir/src/components/sensor.cpp.obj" "gcc" "CMakeFiles/device.dir/src/components/sensor.cpp.obj.d"
   "C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/device.cpp" "CMakeFiles/device.dir/src/device.cpp.obj" "gcc" "CMakeFiles/device.dir/src/device.cpp.obj.d"
   "C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/main.cpp" "CMakeFiles/device.dir/src/main.cpp.obj" "gcc" "CMakeFiles/device.dir/src/main.cpp.obj.d"
   "C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/program.cpp" "CMakeFiles/device.dir/src/program.cpp.obj" "gcc" "CMakeFiles/device.dir/src/program.cpp.obj.d"
