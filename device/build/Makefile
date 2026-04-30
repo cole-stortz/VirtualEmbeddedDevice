@@ -176,6 +176,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/protocol.obj: src/protocol.cpp.obj
+.PHONY : src/protocol.obj
+
+# target to build an object file
+src/protocol.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/protocol.cpp.obj
+.PHONY : src/protocol.cpp.obj
+
+src/protocol.i: src/protocol.cpp.i
+.PHONY : src/protocol.i
+
+# target to preprocess a source file
+src/protocol.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/protocol.cpp.i
+.PHONY : src/protocol.cpp.i
+
+src/protocol.s: src/protocol.cpp.s
+.PHONY : src/protocol.s
+
+# target to generate assembly for a file
+src/protocol.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/protocol.cpp.s
+.PHONY : src/protocol.cpp.s
+
 src/tcp_client.obj: src/tcp_client.cpp.obj
 .PHONY : src/tcp_client.obj
 
@@ -215,6 +239,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/protocol.obj
+	@echo ... src/protocol.i
+	@echo ... src/protocol.s
 	@echo ... src/tcp_client.obj
 	@echo ... src/tcp_client.i
 	@echo ... src/tcp_client.s

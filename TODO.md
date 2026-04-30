@@ -7,7 +7,7 @@
 - [ ] `device.h/.cpp` — main device class, owns all components, runs main loop
 #### Communication
 - [ ] `tcp_client.h/.cpp` — socket logic, connect to server, send/recv, retry logic
-- [ ] `protocol.h/.cpp` — message framing, serialization/deserialization
+- [x] `protocol.h/.cpp` — message framing, serialization/deserialization
 #### Config
 - [x] Design `layout.json` schema — component types, IDs, metadata
 - [x] `layout.json` — first real device config (LEDs, buttons, sensors, motors)

@@ -9,6 +9,7 @@ add_executable(device
     src/main.cpp
     src/device.cpp
     src/tcp_client.cpp
+    src/protocol.cpp
 )
 
 target_link_libraries(device ws2_32)
