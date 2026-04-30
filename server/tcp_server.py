@@ -8,11 +8,13 @@ PORT = 8080
 def handle_connection(conn, addr):
     print(f"[Server] Connected by {addr}")
 
+    # Receive handshake message
     message = receive_message(conn)
     if not message:
         print("[Server] No message received.")
         return
 
+    # Process handshake
     if message["type"] == "HANDSHAKE":
         # create session from handshake
         session = DeviceSession(conn, addr, message)
@@ -30,6 +32,23 @@ def handle_connection(conn, addr):
         session.print_session()
     else:
         print(f"[Server] Unexpected message type: {message['type']}")
+        return
+    
+    # main loop - send commands to device
+    print("\n[Server] Enter commands to send to device (type quit to exit):")
+    while True:
+        component_id = input("Component ID: ")
+        if component_id.lower() == "quit":
+            print("[Server] Closing connection.")
+            break
+        action = input("Action: ")
+        send_message(conn, {
+            "type": "COMMAND",
+            "payload": {
+                "component_id": component_id,
+                "action": action
+            }
+        })
 
 def main():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
