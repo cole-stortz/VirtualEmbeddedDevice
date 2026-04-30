@@ -45,6 +45,7 @@ int main() {
         return 1;
     }
 
+    device.sock = client.sock;
     // run program
     std::cout << "[Device] Starting program...\n";
     setup(device);

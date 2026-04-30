@@ -254,7 +254,11 @@ CMakeFiles/device.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.2.0/any \
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/component.h \
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/json.hpp \
- C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/tcp_client.h \
+ C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/led.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/chrono \
+ C:/msys64/ucrt64/include/c++/15.2.0/thread \
+ C:/msys64/ucrt64/include/c++/15.2.0/bits/std_thread.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/bits/this_thread_sleep.h \
  C:/msys64/ucrt64/include/winsock2.h \
  C:/msys64/ucrt64/include/_mingw_unicode.h \
  C:/msys64/ucrt64/include/windows.h C:/msys64/ucrt64/include/sdkddkver.h \
@@ -475,8 +479,10 @@ CMakeFiles/device.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/psdk_inc/_wsadata.h \
  C:/msys64/ucrt64/include/ws2def.h \
  C:/msys64/ucrt64/include/psdk_inc/_wsa_errnos.h \
- C:/msys64/ucrt64/include/qos.h C:/msys64/ucrt64/include/ws2tcpip.h \
- C:/msys64/ucrt64/include/ws2ipdef.h C:/msys64/ucrt64/include/in6addr.h \
+ C:/msys64/ucrt64/include/qos.h \
+ C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/tcp_client.h \
+ C:/msys64/ucrt64/include/ws2tcpip.h C:/msys64/ucrt64/include/ws2ipdef.h \
+ C:/msys64/ucrt64/include/in6addr.h \
  C:/msys64/ucrt64/include/psdk_inc/_ip_mreq1.h \
  C:/msys64/ucrt64/include/mstcpip.h \
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/protocol.h \

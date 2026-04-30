@@ -35,21 +35,20 @@ def handle_connection(conn, addr):
         return
     
     # main loop - send commands to device
-    print("\n[Server] Enter commands to send to device (type quit to exit):")
+    # main loop - listen for state updates
+    print("\n[Server] Listening for state updates...")
     while True:
-        component_id = input("Component ID: ")
-        if component_id.lower() == "quit":
-            print("[Server] Closing connection.")
+        message = receive_message(conn)
+        if not message:
+            print("[Server] Device disconnected.")
             break
-        action = input("Action: ")
-        send_message(conn, {
-            "type": "COMMAND",
-            "payload": {
-                "component_id": component_id,
-                "action": action,
-                "params": {"on": True}  # hardcoded for now just to test
-            }
-        })
+
+        if message["type"] == "STATE_UPDATE":
+            print(f"[Server] Received state update: {message}")
+            component_id = message["payload"]["component_id"]
+            state = message["payload"]["state"]
+            session.update_component_state(component_id, state)
+            print(f"[STATE] {component_id} -> {state}")
 
 def main():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
