@@ -1,50 +1,46 @@
 import socket
-from protocol import send_message, receive_message
+from protocol import receive_message, send_message
+from device_session import DeviceSession
 
 HOST = 'localhost'
 PORT = 8080
 
-# This is a simple TCP server that listens for incoming connections and handles a handshake message from the client.
-def handle_client(conn, addr):
+def handle_connection(conn, addr):
     print(f"[Server] Connected by {addr}")
 
-    # wait for handshake message
     message = receive_message(conn)
     if not message:
-        print(f"[Server] No handshake recieved")
+        print("[Server] No message received.")
         return
-    
-    # handle handshake message
-    if message["type"] == "HANDSHAKE":
-        print(f"[Server] Handshake received from: {message['payload']['device_name']}")
-        print(f"[Server] Version: {message['payload']['version']}")
-        print(f"[Server] Components:")
-        for component in message["payload"]["layout"]["components"]:
-            print(f"  - [{component['type']}] {component['id']} | {component['label']}")
 
-        # send handshake response
+    if message["type"] == "HANDSHAKE":
+        # create session from handshake
+        session = DeviceSession(conn, addr, message)
+
+        # send ACK
         send_message(conn, {
             "type": "HANDSHAKE_ACK",
             "payload": {
                 "status": "ok"
             }
         })
+        print("[Server] Handshake ACK sent")
 
-        print("[Server] Handshake ACK sent\n")
+        # print session info
+        session.print_session()
     else:
         print(f"[Server] Unexpected message type: {message['type']}")
 
 def main():
-    # Start the TCP server
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.bind((HOST, PORT))
         s.listen()
-        print(f"[Server] Listening on {HOST}:{PORT}...")
+        print(f"[Server] Listening on {HOST}:{PORT} ...")
 
-        # Accept incoming connections and handle them
         conn, addr = s.accept()
         with conn:
-            handle_client(conn, addr)
+            handle_connection(conn, addr)
 
 if __name__ == "__main__":
     main()

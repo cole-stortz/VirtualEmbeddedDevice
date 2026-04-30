@@ -25,8 +25,8 @@
 #### Core
 - [x] Begin Development...
 - [ ] `main.py` — entry point, starts server, launches dashboard
-- [ ] `tcp_server.py` — accepts connections, passes to session handler
-- [ ] `device_session.py` — manages connected device state, parsed layout, socket
+- [x] `tcp_server.py` — accepts connections, passes to session handler
+- [x] `device_session.py` — manages connected device state, parsed layout, socket
 - [x] `protocol.py` — mirrors device protocol, message parsing
 #### Dashboard
 - [ ] `app.py` — dashboard entry point, main window/app loop
