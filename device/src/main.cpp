@@ -33,8 +33,14 @@ int main() {
 
     // wait for ACK
     std::string reply = receiveMessage(client.sock);
-    std::cout << "[Device] Server replied: " << reply << "\n";
-
+    std::cout << "[DEBUG] Raw reply: " << reply << "\n";  // Debugging line to see the raw reply
+    json ack = json::parse(reply);
+    if (ack["type"] == "HANDSHAKE_ACK" && ack["payload"]["status"] == "ok") {
+        std::cout << "[Device] Handshake acknowledged\n";
+    } else {
+        std::cerr << "[Device] Unexpected response\n";
+    }
+    
     client.disconnect();
     return 0;
 }

@@ -6,7 +6,7 @@
 - [ ] `main.cpp` — entry point, boot sequence, start device loop
 - [ ] `device.h/.cpp` — main device class, owns all components, runs main loop
 #### Communication
-- [ ] `tcp_client.h/.cpp` — socket logic, connect to server, send/recv, retry logic
+- [x] `tcp_client.h/.cpp` — socket logic, connect to server, send/recv, retry logic
 - [x] `protocol.h/.cpp` — message framing, serialization/deserialization
 #### Config
 - [x] Design `layout.json` schema — component types, IDs, metadata
