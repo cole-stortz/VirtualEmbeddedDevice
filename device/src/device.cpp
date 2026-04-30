@@ -1,16 +1,15 @@
 #include "device.h"
+#include "components/led.h"
 #include <fstream>
 #include <iostream>
 
 bool Device::loadLayout(const std::string& filepath) {
-    // open the file
     std::ifstream file(filepath);
     if (!file.is_open()) {
         std::cerr << "[DEVICE] Failed to open layout file: " << filepath << "\n";
         return false;
     }
 
-    // parse the JSON
     json layout;
     try {
         file >> layout;
@@ -19,24 +18,21 @@ bool Device::loadLayout(const std::string& filepath) {
         return false;
     }
 
-    // load device info
     name = layout["device"]["name"];
     version = layout["device"]["version"];
 
-    // load components
     for (const auto& c : layout["components"]) {
-        Component comp;
-        comp.id = c["id"];
-        comp.type = c["type"];
-        comp.label = c["label"];
-        comp.state = c["state"];
-        
-        // store any extra fields (sensor_type, unit etc)
-        if (c.contains("sensor_type"))comp.extra["sensor_type"] = c["sensor_type"];
-        if (c.contains("unit"))comp.extra["unit"] = c["unit"];
+        std::string type  = c["type"];
+        std::string id    = c["id"];
+        std::string label = c["label"];
+        json state        = c["state"];
 
-        components.push_back(comp);
+        if (type == "led") {
+            components.push_back(std::make_shared<Led>(id, label, state));
+        }
+        // more types coming soon
     }
+
     return true;
 }
 
@@ -44,8 +40,8 @@ void Device::printlayout() {
     std::cout << "Device Name: " << name << "\n";
     std::cout << "Version: " << version << "\n";
     std::cout << "Components:\n";
-    for (const auto& comp : components) {
-        std::cout << "  - [" << comp.type << "] " << comp.id << " | " << comp.label << "\n";
+    for (const auto& c : components) {
+        std::cout << "  - [" << c->type << "] " << c->id << " | " << c->label << "\n";
     }
 }
 
@@ -54,4 +50,11 @@ json Device::getRawLayout() {
     json layout;
     file >> layout;
     return layout;
+}
+
+std::shared_ptr<Component> Device::getComponent(const std::string& id) {
+    for (const auto& c : components) {
+        if (c->id == id) return c;
+    }
+    return nullptr;
 }

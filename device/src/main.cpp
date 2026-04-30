@@ -35,7 +35,6 @@ int main() {
 
     // wait for ACK
     std::string reply = receiveMessage(client.sock);
-    std::cout << "[DEBUG] Raw reply: " << reply << "\n";  // Debugging line to see the raw reply
     json ack = json::parse(reply);
     if (ack["type"] == "HANDSHAKE_ACK" && ack["payload"]["status"] == "ok") {
         std::cout << "[Device] Handshake acknowledged\n";
@@ -48,28 +47,34 @@ int main() {
     // main loop
     std::cout << "[Device] Entering main loop...\n";
     while (true) {
-        // Wait for messages from the server
         std::string raw = receiveMessage(client.sock);
         if (raw.empty()) {
             std::cout << "[Device] Connection closed by server.\n";
             break;
         }
 
-        // Parse the message
         json message = json::parse(raw);
         std::string type = message["type"];
-        std::cout << "[Device] Recieved: " << type << "\n";
+        std::cout << "[Device] Received: " << type << "\n";
 
         if (type == "COMMAND") {
             std::string component_id = message["payload"]["component_id"];
             std::string action = message["payload"]["action"];
-            std::cout << "[Device] Command -> " << component_id << " : " << action << "\n";
+            json params = message["payload"].value("params", json::object());
+
+            // dispatch to component
+            auto component = device.getComponent(component_id);
+            if (component) {
+                component->handleCommand(action, params);
+            } else {
+                std::cout << "[Device] Unknown component: " << component_id << "\n";
+            }
         } else if (type == "QUIT") {
             std::cout << "[Device] Quit received. Disconnecting.\n";
             break;
         }
     }
-    
+
     client.disconnect();
     return 0;
 }

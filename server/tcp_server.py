@@ -46,7 +46,8 @@ def handle_connection(conn, addr):
             "type": "COMMAND",
             "payload": {
                 "component_id": component_id,
-                "action": action
+                "action": action,
+                "params": {"on": True}  # hardcoded for now just to test
             }
         })
 

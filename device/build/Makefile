@@ -128,6 +128,54 @@ device/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/build
 .PHONY : device/fast
 
+src/components/component.obj: src/components/component.cpp.obj
+.PHONY : src/components/component.obj
+
+# target to build an object file
+src/components/component.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/components/component.cpp.obj
+.PHONY : src/components/component.cpp.obj
+
+src/components/component.i: src/components/component.cpp.i
+.PHONY : src/components/component.i
+
+# target to preprocess a source file
+src/components/component.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/components/component.cpp.i
+.PHONY : src/components/component.cpp.i
+
+src/components/component.s: src/components/component.cpp.s
+.PHONY : src/components/component.s
+
+# target to generate assembly for a file
+src/components/component.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/components/component.cpp.s
+.PHONY : src/components/component.cpp.s
+
+src/components/led.obj: src/components/led.cpp.obj
+.PHONY : src/components/led.obj
+
+# target to build an object file
+src/components/led.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/components/led.cpp.obj
+.PHONY : src/components/led.cpp.obj
+
+src/components/led.i: src/components/led.cpp.i
+.PHONY : src/components/led.i
+
+# target to preprocess a source file
+src/components/led.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/components/led.cpp.i
+.PHONY : src/components/led.cpp.i
+
+src/components/led.s: src/components/led.cpp.s
+.PHONY : src/components/led.s
+
+# target to generate assembly for a file
+src/components/led.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/components/led.cpp.s
+.PHONY : src/components/led.cpp.s
+
 src/device.obj: src/device.cpp.obj
 .PHONY : src/device.obj
 
@@ -233,6 +281,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... device
+	@echo ... src/components/component.obj
+	@echo ... src/components/component.i
+	@echo ... src/components/component.s
+	@echo ... src/components/led.obj
+	@echo ... src/components/led.i
+	@echo ... src/components/led.s
 	@echo ... src/device.obj
 	@echo ... src/device.i
 	@echo ... src/device.s

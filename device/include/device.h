@@ -1,25 +1,21 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <memory>
 #include "json.hpp"
+#include "components/component.h"
 
 using json = nlohmann::json;
-
-struct Component {
-    std::string id;
-    std::string type;
-    std::string label;
-    json state;
-    json extra;
-};
 
 class Device {
 public:
     std::string name;
     std::string version;
-    std::vector<Component> components;
+    std::vector<std::shared_ptr<Component>> components;
 
     bool loadLayout(const std::string& filepath);
-    void printlayout(); // For testing purposes
+    void printlayout();
     json getRawLayout();
+
+    std::shared_ptr<Component> getComponent(const std::string& id);
 };

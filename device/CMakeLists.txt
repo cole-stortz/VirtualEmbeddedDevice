@@ -10,6 +10,8 @@ add_executable(device
     src/device.cpp
     src/tcp_client.cpp
     src/protocol.cpp
+    src/components/component.cpp
+    src/components/led.cpp
 )
 
 target_link_libraries(device ws2_32)

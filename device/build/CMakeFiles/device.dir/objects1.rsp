@@ -1,1 +1,1 @@
-CMakeFiles/device.dir/src/main.cpp.obj CMakeFiles/device.dir/src/device.cpp.obj CMakeFiles/device.dir/src/tcp_client.cpp.obj CMakeFiles/device.dir/src/protocol.cpp.obj
+CMakeFiles/device.dir/src/main.cpp.obj CMakeFiles/device.dir/src/device.cpp.obj CMakeFiles/device.dir/src/tcp_client.cpp.obj CMakeFiles/device.dir/src/protocol.cpp.obj CMakeFiles/device.dir/src/components/component.cpp.obj CMakeFiles/device.dir/src/components/led.cpp.obj

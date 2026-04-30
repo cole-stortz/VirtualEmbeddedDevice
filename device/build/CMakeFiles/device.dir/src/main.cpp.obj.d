@@ -146,22 +146,35 @@ CMakeFiles/device.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_vector.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_bvector.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/vector.tcc \
+ C:/msys64/ucrt64/include/c++/15.2.0/memory \
+ C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/bits/align.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/bits/unique_ptr.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/bits/shared_ptr.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/bits/shared_ptr_base.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/bits/allocated_ptr.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/ext/aligned_buffer.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/ext/concurrence.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/bits/shared_ptr_atomic.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/bits/atomic_base.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/bits/atomic_lockfree_defines.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/backward/auto_ptr.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
+ C:/msys64/ucrt64/include/c++/15.2.0/pstl/execution_defs.h \
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/json.hpp \
  C:/msys64/ucrt64/include/c++/15.2.0/algorithm \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algo.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/algorithmfwd.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_heap.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/uniform_int_dist.h \
- C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
  C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
- C:/msys64/ucrt64/include/c++/15.2.0/pstl/execution_defs.h \
  C:/msys64/ucrt64/include/c++/15.2.0/functional \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/std_function.h \
  C:/msys64/ucrt64/include/c++/15.2.0/unordered_map \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/unordered_map.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/hashtable.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/hashtable_policy.h \
- C:/msys64/ucrt64/include/c++/15.2.0/ext/aligned_buffer.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/enable_special_members.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/node_handle.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/erase_if.h \
@@ -169,19 +182,6 @@ CMakeFiles/device.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.2.0/compare \
  C:/msys64/ucrt64/include/c++/15.2.0/iterator \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stream_iterator.h \
- C:/msys64/ucrt64/include/c++/15.2.0/memory \
- C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
- C:/msys64/ucrt64/include/c++/15.2.0/bits/align.h \
- C:/msys64/ucrt64/include/c++/15.2.0/bits/unique_ptr.h \
- C:/msys64/ucrt64/include/c++/15.2.0/bits/shared_ptr.h \
- C:/msys64/ucrt64/include/c++/15.2.0/bits/shared_ptr_base.h \
- C:/msys64/ucrt64/include/c++/15.2.0/bits/allocated_ptr.h \
- C:/msys64/ucrt64/include/c++/15.2.0/ext/concurrence.h \
- C:/msys64/ucrt64/include/c++/15.2.0/bits/shared_ptr_atomic.h \
- C:/msys64/ucrt64/include/c++/15.2.0/bits/atomic_base.h \
- C:/msys64/ucrt64/include/c++/15.2.0/bits/atomic_lockfree_defines.h \
- C:/msys64/ucrt64/include/c++/15.2.0/backward/auto_ptr.h \
- C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
  C:/msys64/ucrt64/include/c++/15.2.0/utility \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_relops.h \
  C:/msys64/ucrt64/include/c++/15.2.0/forward_list \
@@ -252,6 +252,8 @@ CMakeFiles/device.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_numeric.h \
  C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_numeric_defs.h \
  C:/msys64/ucrt64/include/c++/15.2.0/any \
+ C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/component.h \
+ C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/json.hpp \
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/tcp_client.h \
  C:/msys64/ucrt64/include/winsock2.h \
  C:/msys64/ucrt64/include/_mingw_unicode.h \
