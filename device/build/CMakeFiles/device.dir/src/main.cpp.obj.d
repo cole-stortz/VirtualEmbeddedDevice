@@ -477,4 +477,5 @@ CMakeFiles/device.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/ws2ipdef.h C:/msys64/ucrt64/include/in6addr.h \
  C:/msys64/ucrt64/include/psdk_inc/_ip_mreq1.h \
  C:/msys64/ucrt64/include/mstcpip.h \
- C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/protocol.h
+ C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/protocol.h \
+ C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/json.hpp

@@ -21,5 +21,5 @@ public:
 
     bool loadLayout(const std::string& filepath);
     void printlayout(); // For testing purposes
+    json getRawLayout();
 };
-

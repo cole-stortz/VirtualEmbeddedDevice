@@ -2,6 +2,9 @@
 #include "device.h"
 #include "tcp_client.h"
 #include "protocol.h"
+#include "json.hpp"
+
+using json = nlohmann::json;
 
 int main() {
     Device device;
@@ -17,10 +20,18 @@ int main() {
         return 1;
     }
 
-    // test sending a framed message
-    sendMessage(client.sock, "hello from device");
+    // build the HANDSHAKE message
+    json handshake;
+    handshake["type"] = "HANDSHAKE";
+    handshake["payload"]["device_name"] = device.name;
+    handshake["payload"]["version"] = device.version;
+    handshake["payload"]["layout"] = device.getRawLayout();
 
-    // test receiving a framed reply
+    // send it
+    sendMessage(client.sock, handshake.dump());
+    std::cout << "[Device] Handshake sent\n";
+
+    // wait for ACK
     std::string reply = receiveMessage(client.sock);
     std::cout << "[Device] Server replied: " << reply << "\n";
 

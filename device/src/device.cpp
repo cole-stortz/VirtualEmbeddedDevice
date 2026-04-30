@@ -48,3 +48,10 @@ void Device::printlayout() {
         std::cout << "  - [" << comp.type << "] " << comp.id << " | " << comp.label << "\n";
     }
 }
+
+json Device::getRawLayout() {
+    std::ifstream file("../layout/layout.json");
+    json layout;
+    file >> layout;
+    return layout;
+}
