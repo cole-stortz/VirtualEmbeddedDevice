@@ -224,6 +224,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/program.obj: src/program.cpp.obj
+.PHONY : src/program.obj
+
+# target to build an object file
+src/program.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/program.cpp.obj
+.PHONY : src/program.cpp.obj
+
+src/program.i: src/program.cpp.i
+.PHONY : src/program.i
+
+# target to preprocess a source file
+src/program.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/program.cpp.i
+.PHONY : src/program.cpp.i
+
+src/program.s: src/program.cpp.s
+.PHONY : src/program.s
+
+# target to generate assembly for a file
+src/program.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\device.dir\build.make CMakeFiles/device.dir/src/program.cpp.s
+.PHONY : src/program.cpp.s
+
 src/protocol.obj: src/protocol.cpp.obj
 .PHONY : src/protocol.obj
 
@@ -293,6 +317,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/program.obj
+	@echo ... src/program.i
+	@echo ... src/program.s
 	@echo ... src/protocol.obj
 	@echo ... src/protocol.i
 	@echo ... src/protocol.s

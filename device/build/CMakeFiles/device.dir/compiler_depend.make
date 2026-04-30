@@ -526,6 +526,8 @@ CMakeFiles/device.dir/src/components/led.cpp.obj: C:/Users/cdsto/Documents/Virtu
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h
 
 CMakeFiles/device.dir/src/device.cpp.obj: C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/device.cpp \
+  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/component.h \
+  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/led.h \
   C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/device.h \
   C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/json.hpp \
   C:/msys64/ucrt64/include/_mingw.h \
@@ -792,8 +794,10 @@ CMakeFiles/device.dir/src/device.cpp.obj: C:/Users/cdsto/Documents/VirtualEmbedd
   C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h
 
 CMakeFiles/device.dir/src/main.cpp.obj: C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/main.cpp \
+  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/component.h \
   C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/device.h \
   C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/json.hpp \
+  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/program.h \
   C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/protocol.h \
   C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/tcp_client.h \
   C:/msys64/ucrt64/include/_bsd_types.h \
@@ -2171,6 +2175,8 @@ C:/msys64/ucrt64/include/psdk_inc/_xmitfile.h:
 
 C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/protocol.cpp:
 
+C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xtestintrin.h:
+
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h:
 
 C:/msys64/ucrt64/include/wctype.h:
@@ -2270,8 +2276,6 @@ C:/msys64/ucrt64/include/c++/15.2.0/tr1/beta_function.tcc:
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/sgxintrin.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/compare:
-
-C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xtestintrin.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/streambuf:
 
@@ -2828,6 +2832,8 @@ C:/msys64/ucrt64/include/c++/15.2.0/bits/fstream.tcc:
 C:/msys64/ucrt64/include/_mingw_off_t.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/fstream:
+
+C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/program.h:
 
 C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/protocol.h:
 

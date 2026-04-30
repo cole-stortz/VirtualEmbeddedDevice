@@ -131,11 +131,26 @@ CMakeFiles/device.dir/src/protocol.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/device.dir/src/protocol.cpp.s"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\cdsto\Documents\VirtualEmbeddedDevice\device\src\protocol.cpp -o CMakeFiles\device.dir\src\protocol.cpp.s
 
+CMakeFiles/device.dir/src/program.cpp.obj: CMakeFiles/device.dir/flags.make
+CMakeFiles/device.dir/src/program.cpp.obj: CMakeFiles/device.dir/includes_CXX.rsp
+CMakeFiles/device.dir/src/program.cpp.obj: C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/program.cpp
+CMakeFiles/device.dir/src/program.cpp.obj: CMakeFiles/device.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\cdsto\Documents\VirtualEmbeddedDevice\device\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/device.dir/src/program.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/device.dir/src/program.cpp.obj -MF CMakeFiles\device.dir\src\program.cpp.obj.d -o CMakeFiles\device.dir\src\program.cpp.obj -c C:\Users\cdsto\Documents\VirtualEmbeddedDevice\device\src\program.cpp
+
+CMakeFiles/device.dir/src/program.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/device.dir/src/program.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\cdsto\Documents\VirtualEmbeddedDevice\device\src\program.cpp > CMakeFiles\device.dir\src\program.cpp.i
+
+CMakeFiles/device.dir/src/program.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/device.dir/src/program.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\cdsto\Documents\VirtualEmbeddedDevice\device\src\program.cpp -o CMakeFiles\device.dir\src\program.cpp.s
+
 CMakeFiles/device.dir/src/components/component.cpp.obj: CMakeFiles/device.dir/flags.make
 CMakeFiles/device.dir/src/components/component.cpp.obj: CMakeFiles/device.dir/includes_CXX.rsp
 CMakeFiles/device.dir/src/components/component.cpp.obj: C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/components/component.cpp
 CMakeFiles/device.dir/src/components/component.cpp.obj: CMakeFiles/device.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\cdsto\Documents\VirtualEmbeddedDevice\device\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/device.dir/src/components/component.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\cdsto\Documents\VirtualEmbeddedDevice\device\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/device.dir/src/components/component.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/device.dir/src/components/component.cpp.obj -MF CMakeFiles\device.dir\src\components\component.cpp.obj.d -o CMakeFiles\device.dir\src\components\component.cpp.obj -c C:\Users\cdsto\Documents\VirtualEmbeddedDevice\device\src\components\component.cpp
 
 CMakeFiles/device.dir/src/components/component.cpp.i: cmake_force
@@ -150,7 +165,7 @@ CMakeFiles/device.dir/src/components/led.cpp.obj: CMakeFiles/device.dir/flags.ma
 CMakeFiles/device.dir/src/components/led.cpp.obj: CMakeFiles/device.dir/includes_CXX.rsp
 CMakeFiles/device.dir/src/components/led.cpp.obj: C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/components/led.cpp
 CMakeFiles/device.dir/src/components/led.cpp.obj: CMakeFiles/device.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\cdsto\Documents\VirtualEmbeddedDevice\device\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/device.dir/src/components/led.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\cdsto\Documents\VirtualEmbeddedDevice\device\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/device.dir/src/components/led.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/device.dir/src/components/led.cpp.obj -MF CMakeFiles\device.dir\src\components\led.cpp.obj.d -o CMakeFiles\device.dir\src\components\led.cpp.obj -c C:\Users\cdsto\Documents\VirtualEmbeddedDevice\device\src\components\led.cpp
 
 CMakeFiles/device.dir/src/components/led.cpp.i: cmake_force
@@ -167,6 +182,7 @@ device_OBJECTS = \
 "CMakeFiles/device.dir/src/device.cpp.obj" \
 "CMakeFiles/device.dir/src/tcp_client.cpp.obj" \
 "CMakeFiles/device.dir/src/protocol.cpp.obj" \
+"CMakeFiles/device.dir/src/program.cpp.obj" \
 "CMakeFiles/device.dir/src/components/component.cpp.obj" \
 "CMakeFiles/device.dir/src/components/led.cpp.obj"
 
@@ -177,13 +193,14 @@ device.exe: CMakeFiles/device.dir/src/main.cpp.obj
 device.exe: CMakeFiles/device.dir/src/device.cpp.obj
 device.exe: CMakeFiles/device.dir/src/tcp_client.cpp.obj
 device.exe: CMakeFiles/device.dir/src/protocol.cpp.obj
+device.exe: CMakeFiles/device.dir/src/program.cpp.obj
 device.exe: CMakeFiles/device.dir/src/components/component.cpp.obj
 device.exe: CMakeFiles/device.dir/src/components/led.cpp.obj
 device.exe: CMakeFiles/device.dir/build.make
 device.exe: CMakeFiles/device.dir/linkLibs.rsp
 device.exe: CMakeFiles/device.dir/objects1.rsp
 device.exe: CMakeFiles/device.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\cdsto\Documents\VirtualEmbeddedDevice\device\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable device.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\cdsto\Documents\VirtualEmbeddedDevice\device\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable device.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\device.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

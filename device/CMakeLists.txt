@@ -10,6 +10,7 @@ add_executable(device
     src/device.cpp
     src/tcp_client.cpp
     src/protocol.cpp
+    src/program.cpp
     src/components/component.cpp
     src/components/led.cpp
 )

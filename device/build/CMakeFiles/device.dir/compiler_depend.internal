@@ -529,6 +529,8 @@ CMakeFiles/device.dir/src/components/led.cpp.obj
 
 CMakeFiles/device.dir/src/device.cpp.obj
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/device.cpp
+ C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/component.h
+ C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/led.h
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/device.h
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/json.hpp
  C:/msys64/ucrt64/include/_mingw.h
@@ -796,8 +798,10 @@ CMakeFiles/device.dir/src/device.cpp.obj
 
 CMakeFiles/device.dir/src/main.cpp.obj
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/src/main.cpp
+ C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/component.h
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/device.h
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/json.hpp
+ C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/program.h
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/protocol.h
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/tcp_client.h
  C:/msys64/ucrt64/include/_bsd_types.h
