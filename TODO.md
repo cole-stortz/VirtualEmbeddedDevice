@@ -23,11 +23,11 @@
 
 ### Server (Python)
 #### Core
-- [ ] Begin Development...
+- [x] Begin Development...
 - [ ] `main.py` — entry point, starts server, launches dashboard
 - [ ] `tcp_server.py` — accepts connections, passes to session handler
 - [ ] `device_session.py` — manages connected device state, parsed layout, socket
-- [ ] `protocol.py` — mirrors device protocol, message parsing
+- [x] `protocol.py` — mirrors device protocol, message parsing
 #### Dashboard
 - [ ] `app.py` — dashboard entry point, main window/app loop
 - [ ] `ui_builder.py` — dynamically builds UI widgets from received layout.json
