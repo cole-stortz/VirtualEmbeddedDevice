@@ -257,6 +257,7 @@ CMakeFiles/device.dir/src/components/led.cpp.obj: \
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/device.h \
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/json.hpp \
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/sensor.h \
+ C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/motor.h \
  C:/msys64/ucrt64/include/c++/15.2.0/chrono \
  C:/msys64/ucrt64/include/c++/15.2.0/thread \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/std_thread.h \

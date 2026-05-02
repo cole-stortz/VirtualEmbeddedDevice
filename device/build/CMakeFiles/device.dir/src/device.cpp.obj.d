@@ -257,6 +257,7 @@ CMakeFiles/device.dir/src/device.cpp.obj: \
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/json.hpp \
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/led.h \
  C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/sensor.h \
+ C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/components/motor.h \
  C:/msys64/ucrt64/include/c++/15.2.0/chrono \
  C:/msys64/ucrt64/include/c++/15.2.0/thread \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/std_thread.h \
@@ -482,9 +483,9 @@ CMakeFiles/device.dir/src/device.cpp.obj: \
  C:/msys64/ucrt64/include/ws2def.h \
  C:/msys64/ucrt64/include/psdk_inc/_wsa_errnos.h \
  C:/msys64/ucrt64/include/qos.h \
+ C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/protocol.h \
  C:/msys64/ucrt64/include/c++/15.2.0/fstream \
  C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/fstream.tcc \
- C:/msys64/ucrt64/include/c++/15.2.0/iostream \
- C:/Users/cdsto/Documents/VirtualEmbeddedDevice/device/include/protocol.h
+ C:/msys64/ucrt64/include/c++/15.2.0/iostream

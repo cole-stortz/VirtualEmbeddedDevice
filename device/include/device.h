@@ -6,6 +6,7 @@
 #include "components/component.h"
 #include "components/led.h"
 #include "components/sensor.h"
+#include "components/motor.h"
 #include <chrono>
 #include <thread>
 #include <winsock2.h>
@@ -25,9 +26,9 @@ public:
     json getRawLayout();
 
     std::shared_ptr<Component> getComponent(const std::string& id);
-
     std::shared_ptr<Led> getLed(const std::string& id);
     std::shared_ptr<Sensor> getSensor(const std::string& id);
+    std::shared_ptr<Motor> getMotor(const std::string& id);
 
     void delay(int ms);
 
@@ -35,4 +36,6 @@ public:
     void setLed(const std::string& id, bool on);
     void setSensorValue(const std::string& id, float value);
     void setSensorColor(const std::string& id, int r, int g, int b);
+    void setMotorSpeed(const std::string& id, float speed);
+    void setMotorDirection(const std::string& id, const std::string& direction);
 };

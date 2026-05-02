@@ -16,7 +16,7 @@
 - [x] `component.h/.cpp` — base class/interface all components inherit from
 - [x] `led.h/.cpp`
 - [ ] `button.h/.cpp`
-- [ ] `sensor.h/.cpp`
+- [x] `sensor.h/.cpp`
 - [ ] `motor.h/.cpp`
 #### Build
 - [x] `CMakeLists.txt` — build config, link includes and sources
@@ -45,8 +45,8 @@
 ### Testing
 - [x] Develop simple chat system using Python and C++
 - [x] Create example TCP client/server files to reference
-- [ ] `mock_server.py` — test device handshake and protocol in isolation
-- [ ] `mock_device.py` — test server/UI without C++ running
+- [x] `test_server.py` — test device handshake and protocol in isolation
+- [x] `test_device.py/.cpp` — test server/UI without C++ running
 - [ ] `protocol_tests/` — unit tests for message framing and parsing
 - [ ] Develop protocol system to be used for communication
 - [ ] Create example UI program to reference for future code

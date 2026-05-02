@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/device.dir/src/components/component.cpp.obj.d"
   "CMakeFiles/device.dir/src/components/led.cpp.obj"
   "CMakeFiles/device.dir/src/components/led.cpp.obj.d"
+  "CMakeFiles/device.dir/src/components/motor.cpp.obj"
+  "CMakeFiles/device.dir/src/components/motor.cpp.obj.d"
   "CMakeFiles/device.dir/src/components/sensor.cpp.obj"
   "CMakeFiles/device.dir/src/components/sensor.cpp.obj.d"
   "CMakeFiles/device.dir/src/device.cpp.obj"
